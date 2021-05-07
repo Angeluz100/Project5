@@ -10,6 +10,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 header {
+    background-image: url(https://images.unsplash.com/photo-1597739239353-50270a473397?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTF8fGJ1aWxkaW5nJTIwc2tpbGxzJTIwcGljJTIwc2lkZXdheXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -54,4 +57,7 @@ footer {
 
 main {
     flex-grow: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 }
