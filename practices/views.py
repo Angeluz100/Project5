@@ -1,4 +1,4 @@
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.shortcuts import render
 from .models import Practice
 
@@ -15,3 +15,13 @@ class CreatePractice(CreateView):
     model = Practice
     fields = ['description']
     success_url = '/'
+
+class UpdatePractice(UpdateView):
+    model = Practice
+    fields = ['description', 'completed']
+    success_url = '/'
+
+class DeletePractice(DeleteView):
+    model = Practice
+    success_url = '/'
+
