@@ -7,12 +7,15 @@
     <section>
         {% for practice in practices%}
         <article>
-            <h1>{{practice.description}} - 
+            <h1>
+                <a href="{% url 'update' practice.id %}">✒️</a>
+                {{practice.description}} - 
                 {% if practice.completed %}
-                    <span>Complete</span>
+                <span>Complete</span>
                 {% else %}
-                    <span>Not Complete</span>
+                <span>Not Complete</span>
                 {% endif %}
+                <a href="{% url 'delete' practice.id %}">😵</a>
             </h1>
         </article>
         {% endfor%}
