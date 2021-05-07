@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+    <h1>Daily Practices</h1>
+    <section>
+        {% for practice in practices%}
+        <article>
+            <h1>{{practice.description}} - 
+                {% if practice.completed %}
+                    <span>Complete</span>
+                {% else %}
+                    <span>Not Complete</span>
+                {% endif %}
+            </h1>
+        </article>
+        {% endfor%}
+    </section>
+</main>
+{% endblock %}
