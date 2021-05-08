@@ -3,8 +3,9 @@
 
 {% block content %}
 <main>
-    <h1>Daily Practices</h1>
     <section>
+        {% if practices %}
+        <h1>Daily Practices</h1>
         {% for practice in practices%}
         <article>
             <h1>
@@ -18,7 +19,11 @@
                 <a href="{% url 'delete' practice.id %}">😵</a>
             </h1>
         </article>
-        {% endfor%}
+        {% endfor %}
+        {% else %}
+        <h1>Sorry, You Need to Get a Skill To Practice</h1>
+        {% endif %}
+        
     </section>
 </main>
 {% endblock %}
